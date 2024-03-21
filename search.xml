@@ -3,7 +3,13 @@
   <entry>
     <title>力扣刷题周记(1)</title>
     <url>/posts/a298d6c9/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h2><p>这几天写了几个回溯算法，感觉回溯算法的主要几个要点</p>
+<ol>
+<li>什么时候回溯终止</li>
+<li>如何选择下一个节点</li>
+<li>进行怎么样的回溯</li>
+</ol>
+]]></content>
   </entry>
   <entry>
     <title>my first blog</title>
