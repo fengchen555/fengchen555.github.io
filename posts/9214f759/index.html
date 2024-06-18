@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,JVM," />
 
 
 
@@ -86,15 +86,18 @@
 
 
 
+<meta name="description" content="GC 的分类 部分收集 新生代收集（Minor GC &#x2F; Young GC）：只对新生代进行垃圾收集； 老年代收集（Major GC &#x2F; Old GC）：只对老年代进行垃圾收集。   混合收集（Mixed GC）：对整个新生代和部分老年代进行垃圾收集。 整堆收集 (Full GC)：收集整个 Java 堆和方法区。  需要注意的是：有的时候Major GC也是代表Full GC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="https://fengchen555.github.io/posts/d63b390f/index.html">
+<meta property="og:title" content="JVM的内存收集算法">
+<meta property="og:url" content="https://fengchen555.github.io/posts/9214f759/index.html">
 <meta property="og:site_name" content="fengchen555">
+<meta property="og:description" content="GC 的分类 部分收集 新生代收集（Minor GC &#x2F; Young GC）：只对新生代进行垃圾收集； 老年代收集（Major GC &#x2F; Old GC）：只对老年代进行垃圾收集。   混合收集（Mixed GC）：对整个新生代和部分老年代进行垃圾收集。 整堆收集 (Full GC)：收集整个 Java 堆和方法区。  需要注意的是：有的时候Major GC也是代表Full GC">
 <meta property="og:locale" content="zn_CN">
-<meta property="article:published_time" content="2024-03-18T13:46:09.000Z">
-<meta property="article:modified_time" content="2024-03-21T06:49:50.481Z">
+<meta property="article:published_time" content="2024-06-18T01:42:49.000Z">
+<meta property="article:modified_time" content="2024-06-18T02:29:31.528Z">
 <meta property="article:author" content="yellow david">
-<meta property="article:tag" content="fengchen555,bupt">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
 
 
@@ -125,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://fengchen555.github.io/posts/d63b390f/"/>
+  <link rel="canonical" href="https://fengchen555.github.io/posts/9214f759/"/>
 
 
 
 
 
-  <title>my first blog | fengchen555</title>
+  <title>JVM的内存收集算法 | fengchen555</title>
   
 
 
@@ -302,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchen555.github.io/posts/d63b390f/">
+    <link itemprop="mainEntityOfPage" href="https://fengchen555.github.io/posts/9214f759/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -319,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">my first blog</h1>
+          <h1 class="post-title" itemprop="name headline">JVM的内存收集算法</h1>
         
 
         <div class="post-meta">
@@ -331,8 +334,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-03-18T21:46:09+08:00">
-                2024-03-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-06-18T09:42:49+08:00">
+                2024-06-18
               </time>
             
 
@@ -341,6 +344,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url" rel="index">
+                    <span itemprop="name">Java知识点</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -363,7 +388,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  0
+                  680
                 </span>
               
 
@@ -379,7 +404,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -400,7 +425,42 @@
       
 
       
-        
+        <h2 id="GC-的分类"><a href="#GC-的分类" class="headerlink" title="GC 的分类"></a>GC 的分类</h2><ul>
+<li>部分收集<ul>
+<li>新生代收集（Minor GC &#x2F; Young GC）：只对新生代进行垃圾收集；</li>
+<li>老年代收集（Major GC &#x2F; Old GC）：只对老年代进行垃圾收集。</li>
+</ul>
+</li>
+<li>混合收集（Mixed GC）：对整个新生代和部分老年代进行垃圾收集。</li>
+<li>整堆收集 (Full GC)：收集整个 Java 堆和方法区。</li>
+</ul>
+<p>需要注意的是：有的时候Major GC也是代表Full GC</p>
+<h2 id="空间分配担保"><a href="#空间分配担保" class="headerlink" title="空间分配担保"></a>空间分配担保</h2><p>空间分配担保其实就是在进行年轻代的回收时，需要确保老年代本身还有容纳年轻代的空间。</p>
+<ul>
+<li>JDK 6 Update 24 之前，在发生 Minor GC 之前，虚拟机必须先检查老年代最大可用的连续空间是否大于新生代所有对象总空间</li>
+<li>JDK 6 Update 24 之后的规则变为只要老年代的连续空间大于新生代对象总大小或者历次晋升的平均大小，就会进行 Minor GC，否则将进行 Full GC。</li>
+</ul>
+<h2 id="死亡对象的方法"><a href="#死亡对象的方法" class="headerlink" title="死亡对象的方法"></a>死亡对象的方法</h2><p>一般来说有两种方法，引用计数法、可达性分析法。</p>
+<h3 id="引用计数法"><a href="#引用计数法" class="headerlink" title="引用计数法"></a>引用计数法</h3><p>给对象中添加一个引用计数器：</p>
+<ul>
+<li>每当有一个地方引用它，计数器就加 1；</li>
+<li>当引用失效，计数器就减 1；</li>
+<li>任何时候计数器为 0 的对象就是不可能再被使用的。</li>
+</ul>
+<p>优点：使用特别简单。</p>
+<p>缺点：难以解决相互引用，引用依赖的问题。</p>
+<h3 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h3><p>“GC Roots”根对象集作为起始点集合，从这些节点开始，根据引用关系向下搜索，搜索过程路径称为“引用链”。如果，某对象到GC Root没有引用链相关联，那么，就是GC Root到对象不可达，则证明这个对象不可能再被使用。</p>
+<h3 id="GC-Roots有哪些"><a href="#GC-Roots有哪些" class="headerlink" title="GC Roots有哪些"></a>GC Roots有哪些</h3><ul>
+<li>虚拟机栈中引用的对象，如：线程中被调用的方法堆栈中使用的参数、局部变量、临时变量。</li>
+<li>方法区中类静态属性引用的对象。</li>
+<li>方法区中常量引用的对象，比如：字符串常量池里的引用。</li>
+<li>本地方法栈中JNI引用的对象。</li>
+<li>Java虚拟机内部的引用，比如：基本数据类型对应的Class对象、常驻异常对象、系统类加载器，如：String、NullPointExcepition等。</li>
+<li>所有被同步锁持有的对象（synchronized关键字）。</li>
+<li>反映Java虚拟机内部情况的JMXBean、JVMTI中注册的回调、本地代码缓存等。</li>
+</ul>
+<p>然而需要注意的是对象可以被回收并不代表立即就被回收。还需要根据对应的收集算法，进行一定的标记才会被收集。</p>
+
       
     </div>
     
@@ -415,6 +475,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+          
+        </div>
+      
 
       
       
@@ -424,8 +492,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/4a17b156/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/posts/3b9e99bc/" rel="next" title="力扣hot100 (1)">
+                <i class="fa fa-chevron-left"></i> 力扣hot100 (1)
               </a>
             
           </div>
@@ -433,10 +501,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/posts/a298d6c9/" rel="prev" title="力扣刷题周记(1)">
-                力扣刷题周记(1) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -604,6 +677,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GC-%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">GC 的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D%E6%8B%85%E4%BF%9D"><span class="nav-number">2.</span> <span class="nav-text">空间分配担保</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E4%BA%A1%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">死亡对象的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">引用计数法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">可达性分析法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GC-Roots%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">3.3.</span> <span class="nav-text">GC Roots有哪些</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
