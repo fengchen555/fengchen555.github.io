@@ -60,17 +60,19 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/user-favicons/1/apple-touch-icon.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/user-favicons/1/favicon-32x32.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/user-favicons/1/favicon-16x16.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/uploads/user-favicons/1/logo.svg?v=5.1.4" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
+
+  <link rel="manifest" href="/images/manifest.json">
 
 
 
@@ -86,15 +88,15 @@
 
 
 
-<meta name="description" content="排序算法由于最近这阵子一直想找个实习，而实习面试的一个重要知识点就是手撕代码，而手撕代码里让你手写排序还是可能的，手写个快排，归并排序……当然应该不会让我手撕堆排序吧…. 因此，并且刷到了一道题，使用O(nlogn)的时间实现对链表的排序，思来想去只有用归并排序来写是最方便的。但是又写不出来好吧，其实是我忘了。特地复习一下。 归并排序定义归并排序（merge sort）是高效的基于比较的稳定排序算">
+<meta name="description" content="由于最近这阵子一直想找个实习，而实习面试的一个重要知识点就是手撕代码，而手撕代码里让你手写排序还是可能的，手写个快排，归并排序……当然应该不会让我手撕堆排序吧…. 因此，并且刷到了一道题，使用O(nlogn)的时间实现对链表的排序，思来想去只有用归并排序来写是最方便的。但是又写不出来好吧，其实是我忘了。特地复习一下。 归并排序定义归并排序（merge sort）是高效的基于比较的稳定排序算法。 特">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法">
 <meta property="og:url" content="https://fengchen555.github.io/posts/735e5788/index.html">
 <meta property="og:site_name" content="fengchen555">
-<meta property="og:description" content="排序算法由于最近这阵子一直想找个实习，而实习面试的一个重要知识点就是手撕代码，而手撕代码里让你手写排序还是可能的，手写个快排，归并排序……当然应该不会让我手撕堆排序吧…. 因此，并且刷到了一道题，使用O(nlogn)的时间实现对链表的排序，思来想去只有用归并排序来写是最方便的。但是又写不出来好吧，其实是我忘了。特地复习一下。 归并排序定义归并排序（merge sort）是高效的基于比较的稳定排序算">
+<meta property="og:description" content="由于最近这阵子一直想找个实习，而实习面试的一个重要知识点就是手撕代码，而手撕代码里让你手写排序还是可能的，手写个快排，归并排序……当然应该不会让我手撕堆排序吧…. 因此，并且刷到了一道题，使用O(nlogn)的时间实现对链表的排序，思来想去只有用归并排序来写是最方便的。但是又写不出来好吧，其实是我忘了。特地复习一下。 归并排序定义归并排序（merge sort）是高效的基于比较的稳定排序算法。 特">
 <meta property="og:locale" content="zn_CN">
 <meta property="article:published_time" content="2024-06-21T17:49:48.000Z">
-<meta property="article:modified_time" content="2024-06-21T18:04:40.467Z">
+<meta property="article:modified_time" content="2024-06-22T16:32:58.259Z">
 <meta property="article:author" content="yellow david">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="排序">
@@ -388,7 +390,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  393
+                  1k
                 </span>
               
 
@@ -404,7 +406,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  4
                 </span>
               
             </div>
@@ -425,7 +427,7 @@
       
 
       
-        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>由于最近这阵子一直想找个实习，而实习面试的一个重要知识点就是手撕代码，而手撕代码里让你手写排序还是可能的，手写个快排，归并排序……当然应该不会让我手撕堆排序吧….</p>
+        <p>由于最近这阵子一直想找个实习，而实习面试的一个重要知识点就是手撕代码，而手撕代码里让你手写排序还是可能的，手写个快排，归并排序……当然应该不会让我手撕堆排序吧….</p>
 <p>因此，并且刷到了一道题，使用O(nlogn)的时间实现对链表的排序，思来想去只有用归并排序来写是最方便的。但是又写不出来<del>好吧，其实是我忘了</del>。特地复习一下。</p>
 <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>归并排序（merge sort）是高效的基于比较的稳定排序算法。</p>
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>基于分治算法，将需要排序的数组，分段排序后，合并排序。时间复杂度很稳定，都是O(nlogn)</p>
@@ -433,7 +435,23 @@
 <p>从左往右枚举 <code>a[i]</code> 和 <code>b[j]</code>，找出最小的值并放入数组 <code>c[k]</code>；重复上述过程直到 <code>a[i]</code> 和 <code>b[j]</code> 有一个为空时，将另一个数组剩下的元素放入 <code>c[k]</code>。</p>
 <p>然后根据<code>a[i]</code> 和 <code>b[j]</code>哪一个不为空，将它加入到剩下的<code>c[j]</code>中。</p>
 <p>为保证排序的稳定性，前段首元素小于或等于后段首元素时（<code>a[i] &lt;= b[j]</code>）而非小于时（<code>a[i] &lt; b[j]</code>）就要作为最小值放入 <code>c[k]</code>。</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p><del>明天继续写</del></p>
+<h3 id="合并代码实现"><a href="#合并代码实现" class="headerlink" title="合并代码实现"></a>合并代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将array的left-mid位置的数组与mid+1与right位置的数组和合并成一个新数组（按升序），并赋值回原数组</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span>[] array, <span class="type">int</span> left, <span class="type">int</span> mid, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] temp = <span class="keyword">new</span> <span class="title class_">int</span>[right - left + <span class="number">1</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">left1</span> <span class="operator">=</span> left;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left2</span> <span class="operator">=</span> mid + <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (left1 &lt;= mid &amp;&amp; left2 &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[left1] &lt;= array[left2]) &#123;</span><br><span class="line">                temp[k++] = array[left1++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[k++] = array[left2++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (left1 &lt;= mid) &#123;</span><br><span class="line">            temp[k++] = array[left1++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (left2 &lt;= right) &#123;</span><br><span class="line">            temp[k++] = array[left2++];</span><br><span class="line">        &#125;</span><br><span class="line">        System.arraycopy(temp, <span class="number">0</span>, array, left, temp.length);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分治法实现归并排序"><a href="#分治法实现归并排序" class="headerlink" title="分治法实现归并排序"></a>分治法实现归并排序</h3><ol>
+<li>当数组长度为<strong>1</strong>时，该数组就已经是有序的，不用再分解。</li>
+<li>当数组长度大于<strong>1</strong>时，该数组很可能不是有序的。此时将该数组分为两段，再分别检查两个数组是否有序（用第 1 条)。如果有序，则将它们合并为一个有序数组；否则对不有序的数组重复第 2 条，再合并。</li>
+</ol>
+<p>为保证排序的复杂度，通常将数组分为尽量等长的两段。mid &#x3D; (left+right)&gt;&gt;1。</p>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里归并排序的是，数组array的left到right的数组位置</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">mergeSort</span><span class="params">(<span class="type">int</span>[] array, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (left &gt;= right) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (left + right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        mergeSort(array, left, mid);</span><br><span class="line">        mergeSort(array, mid + <span class="number">1</span>, right);</span><br><span class="line">        merge(array, left, mid, right);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><del>明天继续写</del></p>
+<h3 id="倍增法实现归并排序"><a href="#倍增法实现归并排序" class="headerlink" title="倍增法实现归并排序"></a>倍增法实现归并排序</h3><p>已知当数组长度为<strong>1</strong>时，该数组就已经是有序的。</p>
+<p>将数组全部切成长度为<strong>1</strong>的段。<br>从左往右依次合并两个长度为<strong>1</strong>的有序段，得到一系列长度**&lt;&#x3D;2<strong>的有序段；<br>从左往右依次合并两个长度</strong>&lt;&#x3D;2<strong>的有序段，得到一系列长度</strong>&lt;&#x3D;4<strong>的有序段；<br>从左往右依次合并两个长度</strong>&lt;&#x3D;4<strong>的有序段，得到一系列长度</strong>&lt;&#x3D;8**的有序段；<br>……<br>重复上述过程直至数组只剩一个有序段，该段就是排好序的原数组。</p>
+<p>例如长度为13。 2+2+2+2+2+2+1-&gt;4+4+4+1-&gt;8+5-&gt;13</p>
+<p>代码实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title function_">mergeSort</span><span class="params">(<span class="type">int</span>[] array)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> array.length;</span><br><span class="line">        <span class="comment">// 倍增法，从1开始，逐步增加子数组的大小</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> <span class="number">1</span>; size &lt; n; size *= <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="comment">// 合并相邻的子数组</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">leftStart</span> <span class="operator">=</span> <span class="number">0</span>; leftStart &lt; n - size; leftStart += <span class="number">2</span> * size) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> leftStart + size - <span class="number">1</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">rightEnd</span> <span class="operator">=</span> Math.min(leftStart + <span class="number">2</span> * size - <span class="number">1</span>, n - <span class="number">1</span>);</span><br><span class="line">                merge(array, leftStart, mid, rightEnd);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://oi-wiki.org/basic/merge-sort/">归并排序 - OI Wiki (oi-wiki.org)</a></p>
 
       
     </div>
@@ -661,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-number">1.1.3.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.1.4.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.4.</span> <span class="nav-text">合并代码实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%B2%BB%E6%B3%95%E5%AE%9E%E7%8E%B0%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">1.5.</span> <span class="nav-text">分治法实现归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.5.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%8D%E5%A2%9E%E6%B3%95%E5%AE%9E%E7%8E%B0%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">1.6.</span> <span class="nav-text">倍增法实现归并排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -695,7 +713,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2k</span>
+    <span title="Site words total count">2.7k</span>
   
 </div>
 
