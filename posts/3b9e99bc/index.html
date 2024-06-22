@@ -19,7 +19,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/lib/pace/pace-theme-big-counter.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="力扣hot100 (1)">
 <meta property="og:url" content="https://fengchen555.github.io/posts/3b9e99bc/index.html">
-<meta property="og:site_name" content="fengchen555">
+<meta property="og:site_name" content="Fengchen&#39;s Blog">
 <meta property="og:description" content="力扣hot100 （1）在一段时间前，曾经一直在写代码随想录的题目，虽然那里的比较全面，但是感觉还是有点慢，题目也太多了吧。然后又想着去找点实习做，一点点地写不知道得到什么时候去。所以随即想到直接刷一些比较好的题库好了。hot100就决定是你了。  写了差不多两天，把双指针和哈希的这两块给做完了。 哈希哈希这块没什么难的，主要是这个最长连续序列这个有点难度。 128. 最长连续序列题目是这样的 1">
 <meta property="og:locale" content="zn_CN">
 <meta property="og:image" content="http://typora-image-fengchen.oss-cn-beijing.aliyuncs.com/img/image-20240326204727168.png">
@@ -138,7 +138,7 @@
 
 
 
-  <title>力扣hot100 (1) | fengchen555</title>
+  <title>力扣hot100 (1) | Fengchen's Blog</title>
   
 
 
@@ -162,13 +162,13 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta custom-logo">
     
 
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">fengchen555</span>
+        <span class="site-title">Fengchen's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -314,11 +314,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/%5Bobject%20Object%5D">
+      <meta itemprop="image" content="/images/1646701395275.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchen555">
+      <meta itemprop="name" content="Fengchen's Blog">
     </span>
 
     
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  833
+                  831
                 </span>
               
 
@@ -434,17 +434,17 @@
 <p>写了差不多两天，把双指针和哈希的这两块给做完了。</p>
 <h2 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h2><p>哈希这块没什么难的，主要是这个最长连续序列这个有点难度。</p>
 <h3 id="128-最长连续序列"><a href="#128-最长连续序列" class="headerlink" title="128. 最长连续序列"></a>128. 最长连续序列</h3><p>题目是这样的</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">128. 最长连续序列</span><br><span class="line">给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。</span><br><span class="line"></span><br><span class="line">请你设计并实现时间复杂度为 O(n) 的算法解决此问题。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">示例 1：</span><br><span class="line"></span><br><span class="line">输入：nums = [100,4,200,1,3,2]</span><br><span class="line">输出：4</span><br><span class="line">解释：最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。</span><br><span class="line">示例 2：</span><br><span class="line"></span><br><span class="line">输入：nums = [0,3,7,2,5,8,4,6,0,1]</span><br><span class="line">输出：9</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">128. 最长连续序列</span><br><span class="line">给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。</span><br><span class="line"></span><br><span class="line">请你设计并实现时间复杂度为 O(n) 的算法解决此问题。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">示例 1：</span><br><span class="line"></span><br><span class="line">输入：nums = [100,4,200,1,3,2]</span><br><span class="line">输出：4</span><br><span class="line">解释：最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。</span><br><span class="line">示例 2：</span><br><span class="line"></span><br><span class="line">输入：nums = [0,3,7,2,5,8,4,6,0,1]</span><br><span class="line">输出：9</span><br></pre></td></tr></table></figure>
 
 <p>一开始着实没有什么思路，只想到可以sort一下，然后直接看不就好了吗。但是又看到题目要求说需要时间复杂度O(n),排序一次了肯定也不止了吧。</p>
 <p>然后想到了用哈希，遍历一次，添加进去。然后再遍历每个数。找到最长的连续值。但是这个方法太慢了，可能因为哈希表生性慢些吧。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//其实就是一定存在一个最长连续的序列，然后哪个序列一定存在一个最小的值，而那个最小的值一直寻找到最大的值的长度不就是最长的长度了吗</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">longestConsecutive</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        HashMap&lt;Integer,Integer&gt; hm = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            hm.put(nums[i], <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!hm.containsKey(num-<span class="number">1</span>)) &#123;</span><br><span class="line">                cur = <span class="number">1</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> num;</span><br><span class="line">                <span class="keyword">while</span> (hm.containsKey(temp+<span class="number">1</span>)) &#123;</span><br><span class="line">                    cur++;</span><br><span class="line">                    temp++;</span><br><span class="line">                &#125;</span><br><span class="line">                max = Math.max(max, cur);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//其实就是一定存在一个最长连续的序列，然后哪个序列一定存在一个最小的值，而那个最小的值一直寻找到最大的值的长度不就是最长的长度了吗</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">longestConsecutive</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        HashMap&lt;Integer,Integer&gt; hm = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            hm.put(nums[i], <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!hm.containsKey(num-<span class="number">1</span>)) &#123;</span><br><span class="line">                cur = <span class="number">1</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> num;</span><br><span class="line">                <span class="keyword">while</span> (hm.containsKey(temp+<span class="number">1</span>)) &#123;</span><br><span class="line">                    cur++;</span><br><span class="line">                    temp++;</span><br><span class="line">                &#125;</span><br><span class="line">                max = Math.max(max, cur);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>随即看一下题解，进行了学习一番。</p>
 <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>如何在一个O（n）的时间内完成，并且还能更加优化呢。用Set集合不就可以了吗，我怎么没想到了，随即改为Set实现。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">longestConsecutive</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        Set&lt;Integer&gt; set=<span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j : nums) &#123;</span><br><span class="line">            set.add(j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : set) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.contains(num-<span class="number">1</span>)) &#123;</span><br><span class="line">                cur = <span class="number">1</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> num;</span><br><span class="line">                <span class="keyword">while</span> (set.contains(temp+<span class="number">1</span>)) &#123;</span><br><span class="line">                    cur++;</span><br><span class="line">                    temp++;</span><br><span class="line">                &#125;</span><br><span class="line">                max = Math.max(max, cur);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">longestConsecutive</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        Set&lt;Integer&gt; set=<span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j : nums) &#123;</span><br><span class="line">            set.add(j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : set) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.contains(num-<span class="number">1</span>)) &#123;</span><br><span class="line">                cur = <span class="number">1</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> num;</span><br><span class="line">                <span class="keyword">while</span> (set.contains(temp+<span class="number">1</span>)) &#123;</span><br><span class="line">                    cur++;</span><br><span class="line">                    temp++;</span><br><span class="line">                &#125;</span><br><span class="line">                max = Math.max(max, cur);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><h3 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</span><br><span class="line"></span><br><span class="line">请注意 ，必须在不复制数组的情况下原地对数组进行操作。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: nums = [0,1,0,3,12]</span><br><span class="line">输出: [1,3,12,0,0]</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: nums = [0]</span><br><span class="line">输出: [0]</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">提示:</span><br><span class="line"></span><br><span class="line">1 &lt;= nums.length &lt;= 104</span><br><span class="line">-231 &lt;= nums[i] &lt;= 231 - 1</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">进阶：你能尽量减少完成的操作次数吗？</span><br></pre></td></tr></table></figure>
+<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><h3 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h3><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</span><br><span class="line"></span><br><span class="line">请注意 ，必须在不复制数组的情况下原地对数组进行操作。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: nums = [0,1,0,3,12]</span><br><span class="line">输出: [1,3,12,0,0]</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: nums = [0]</span><br><span class="line">输出: [0]</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">提示:</span><br><span class="line"></span><br><span class="line">1 &lt;= nums.length &lt;= 104</span><br><span class="line">-231 &lt;= nums[i] &lt;= 231 - 1</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">进阶：你能尽量减少完成的操作次数吗？</span><br></pre></td></tr></table></figure>
 
 <p>这道题主要是在于，在当前数组上完成操作，其实就是以为着要一直交换。</p>
 
@@ -558,7 +558,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/%5Bobject%20Object%5D"
+                src="/images/1646701395275.jpeg"
                 alt="" />
             
               <p class="site-author-name" itemprop="name"></p>
@@ -749,7 +749,16 @@
 setInterval("createtime()",250);
 </script>
 
+
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
 
 
 
@@ -793,6 +802,8 @@ setInterval("createtime()",250);
   
 
 
+  
+
 
 
 
@@ -831,6 +842,11 @@ setInterval("createtime()",250);
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1236,6 +1252,10 @@ setInterval("createtime()",250);
   
 
   
+
+  <!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 </html>
